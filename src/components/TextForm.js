@@ -5,9 +5,9 @@ function TextForm() {
   return (
     <>
       <Textarea
-        sx={{ mt: "4rem" }}
+        sx={{ mt: "1rem" }}
         color="neutral"
-        minRows={3}
+        minRows={8}
         placeholder="Enter your text..."
         size="lg"
         variant="outlined"
