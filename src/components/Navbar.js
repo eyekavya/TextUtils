@@ -1,4 +1,5 @@
 import * as React from "react";
+import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -7,7 +8,7 @@ import Button from "@mui/material/Button";
 
 const pages = ["Home", "About"];
 
-function ResponsiveAppBar() {
+function Navbar(props) {
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -27,7 +28,7 @@ function ResponsiveAppBar() {
               textDecoration: "none",
             }}
           >
-            TextUtils
+            {props.title}
           </Typography>
 
           {pages.map((page) => (
@@ -40,4 +41,12 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Navbar;
+
+Navbar.propTypes = {
+  title: PropTypes.string.isRequired,
+};
+
+Navbar.defaultProps = {
+  title: "Set title",
+};
