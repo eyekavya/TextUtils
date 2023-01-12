@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+.css-1tclrec-JoyButton-root:hover {
+  background-color: #1c6dbe !important;
+}
