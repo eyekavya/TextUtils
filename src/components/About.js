@@ -8,22 +8,29 @@ import {
 } from "@mui/material";
 
 function About() {
+  // Dark Mode State
   const [mode, setMode] = useState({
     backgroundColor: "#fff",
     color: "#000",
   });
+
+  // Button State for Dark Mode
+  const [modeBtnText, setModeBtnText] = useState("Enable Dark Mode");
 
   function changeMode() {
     if (mode.color === "#000") {
       setMode({
         backgroundColor: "#000",
         color: "#fff",
+        border: "1px solid #fff",
       });
+      setModeBtnText("Enable Light Mode");
     } else {
       setMode({
         backgroundColor: "#fff",
         color: "#000",
       });
+      setModeBtnText("Enable Dark Mode");
     }
   }
 
@@ -39,10 +46,10 @@ function About() {
             id="panel1d-header"
             style={mode}
           >
-            <Typography style={mode}>Collapsible Group Item #1</Typography>
+            <Typography>Collapsible Group Item #1</Typography>
           </AccordionSummary>
           <AccordionDetails style={mode}>
-            <Typography style={mode}>
+            <Typography>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -60,10 +67,10 @@ function About() {
             id="panel2d-header"
             style={mode}
           >
-            <Typography style={mode}>Collapsible Group Item #2</Typography>
+            <Typography>Collapsible Group Item #2</Typography>
           </AccordionSummary>
           <AccordionDetails style={mode}>
-            <Typography style={mode}>
+            <Typography>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -84,7 +91,7 @@ function About() {
             <Typography>Collapsible Group Item #3</Typography>
           </AccordionSummary>
           <AccordionDetails style={mode}>
-            <Typography style={mode}>
+            <Typography>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
               eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -103,7 +110,7 @@ function About() {
           }}
           onClick={changeMode}
         >
-          Enable Dark Mode
+          {modeBtnText}
         </Button>
       </Container>
     </>
