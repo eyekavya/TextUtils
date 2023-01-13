@@ -6,24 +6,34 @@ import { Typography } from "@mui/joy";
 function TextForm() {
   const [text, setText] = useState("");
 
-  function handleUpClick() {
+  function handleUppercase() {
     let newText = text.toUpperCase();
     setText(newText);
   }
 
-  function handleLowClick() {
+  function handleLowercase() {
     let newText = text.toLowerCase();
     setText(newText);
   }
 
-  function handleClrClick() {
+  function handleClear() {
     let newText = "";
     setText(newText);
   }
 
-  function handleRevClick() {
+  function handleReverse() {
     let newText = text.split("").reverse().join("");
     setText(newText);
+  }
+
+  function handleCopy() {
+    // console.log(text);
+    navigator.clipboard.writeText(text);
+  }
+
+  function handleExtraSpace() {
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
   }
 
   function handleOnChange(event) {
@@ -53,7 +63,7 @@ function TextForm() {
           mx: "0.2rem",
           // transition: "none",
         }}
-        onClick={handleUpClick}
+        onClick={handleUppercase}
       >
         Convert to Uppercase
       </Button>
@@ -66,7 +76,7 @@ function TextForm() {
           mx: "0.2rem",
           // transition: "none",
         }}
-        onClick={handleLowClick}
+        onClick={handleLowercase}
       >
         Convert to Lowercase
       </Button>
@@ -79,7 +89,7 @@ function TextForm() {
           mx: "0.2rem",
           // transition: "none",
         }}
-        onClick={handleClrClick}
+        onClick={handleClear}
       >
         Clear Text
       </Button>
@@ -92,9 +102,35 @@ function TextForm() {
           mx: "0.2rem",
           // transition: "none",
         }}
-        onClick={handleRevClick}
+        onClick={handleReverse}
       >
         Reverse Text
+      </Button>
+
+      <Button
+        sx={{
+          background: "#1976d2",
+          color: "white",
+          mt: "1rem",
+          mx: "0.2rem",
+          // transition: "none",
+        }}
+        onClick={handleCopy}
+      >
+        Copy Text
+      </Button>
+
+      <Button
+        sx={{
+          background: "#1976d2",
+          color: "white",
+          mt: "1rem",
+          mx: "0.2rem",
+          // transition: "none",
+        }}
+        onClick={handleExtraSpace}
+      >
+        Remove Extra Space
       </Button>
 
       <Typography variant="h1" component="h2" sx={{ mt: "3rem", mb: "1rem" }}>
