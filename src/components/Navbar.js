@@ -5,15 +5,15 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
-import { ThemeProvider } from "@mui/material";
 import ModeSwitch from "./ModeSwitch";
+import { ThemeProvider } from "@emotion/react";
 
 const pages = ["Home", "About"];
 
 function Navbar(props) {
   return (
-    <ThemeProvider theme={props.mode}>
-      <AppBar position="static">
+    <ThemeProvider theme={props.darkTheme}>
+      <AppBar position="static" enableColorOnDark={!props.darkMode}>
         <Container
           maxWidth="xl"
           style={{
@@ -50,7 +50,7 @@ function Navbar(props) {
               </Button>
             ))}
           </Toolbar>
-          <ModeSwitch />
+          <ModeSwitch toggleMode={props.toggleMode} />
         </Container>
       </AppBar>
     </ThemeProvider>

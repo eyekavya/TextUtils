@@ -51,13 +51,14 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
-function ModeSwitch() {
+function ModeSwitch(props) {
   return (
     <>
       <FormGroup>
         <FormControlLabel
-          control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
-          label="MUI switch"
+          control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked={false} />}
+          label="Dark Mode"
+          onChange={props.toggleMode}
         />
       </FormGroup>
     </>

@@ -4,30 +4,33 @@ import TextForm from "./components/TextForm";
 import Container from "@mui/material/Container";
 import About from "./components/About";
 import Heading from "./components/Heading";
-
 import { useState } from "react";
-
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { palette } from "@mui/system";
+import { createTheme } from "@mui/material/styles";
 
 function App() {
-  const [mode, setMode] = useState("light");
+  const [darkMode, setDarkMode] = useState(false);
 
-  const dark = createTheme({
+  const handleToggleMode = () => {
+    setDarkMode(!darkMode);
+  };
+
+  const darkTheme = createTheme({
     palette: {
       mode: "dark",
-    },
-  });
-  const light = createTheme({
-    palette: {
-      mode: "light",
+      primary: {
+        main: "#1976d2",
+      },
     },
   });
 
   return (
     <>
-      <Navbar title="TextUtils" mode={dark} />
+      <Navbar
+        title="TextUtils"
+        darkTheme={darkTheme}
+        toggleMode={handleToggleMode}
+        darkMode={darkMode}
+      />
 
       {/* <About /> */}
 
@@ -38,4 +41,5 @@ function App() {
     </>
   );
 }
+
 export default App;
