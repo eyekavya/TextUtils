@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Textarea from "@mui/joy/Textarea";
 import Button from "@mui/joy/Button";
-import { Typography } from "@mui/joy";
+import { ThemeProvider, Typography } from "@mui/joy";
 
-function TextForm() {
+function TextForm(props) {
   const [text, setText] = useState("");
 
   function handleUppercase() {
@@ -45,16 +45,19 @@ function TextForm() {
 
   return (
     <>
-      <Textarea
-        sx={{ mt: "1rem" }}
-        color="neutral"
-        minRows={8}
-        placeholder="Enter your text..."
-        size="lg"
-        variant="outlined"
-        value={text}
-        onChange={handleOnChange}
-      />
+      <ThemeProvider>
+        <Textarea
+          position="static"
+          sx={{ mt: "1rem" }}
+          color="neutral"
+          minRows={8}
+          placeholder="Enter your text..."
+          size="lg"
+          variant={!props.darkMode ? "outlined" : "solid"}
+          value={text}
+          onChange={handleOnChange}
+        />
+      </ThemeProvider>
       <Button
         sx={{
           background: "#1976d2",
