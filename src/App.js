@@ -7,6 +7,7 @@ import Heading from "./components/Heading";
 import { useState } from "react";
 import { createTheme } from "@mui/material/styles";
 import AlertMessage from "./components/AlertMessage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -29,18 +30,28 @@ function App() {
 
   return (
     <>
-      <Navbar
-        title="TextUtils"
-        darkTheme={darkTheme}
-        toggleMode={handleToggleMode}
-        darkMode={darkMode}
-      />
-      <AlertMessage alert={alert} />
-      {/* <About /> */}
-      <Container maxWidth="sm">
-        <Heading heading="Enter the text to analyze" />
-        <TextForm darkMode={darkMode} />
-      </Container>
+      <Router>
+        <Navbar
+          title="TextUtils"
+          darkTheme={darkTheme}
+          toggleMode={handleToggleMode}
+          darkMode={darkMode}
+        />
+        <AlertMessage alert={alert} />
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+
+          <Container maxWidth="sm">
+            <Heading heading="Enter the text to analyze" />
+            <Route path="/">
+              <TextForm darkMode={darkMode} />
+            </Route>
+          </Container>
+        </Switch>
+      </Router>
     </>
   );
 }

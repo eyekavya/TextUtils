@@ -48,12 +48,16 @@ function TextForm(props) {
       <ThemeProvider>
         <Textarea
           position="static"
-          sx={{ mt: "1rem" }}
-          color="neutral"
+          sx={{
+            mt: "1rem",
+            backgroundColor: !props.darkMode ? "#fff" : "#000000a3",
+            color: !props.darkMode ? "#000000a3" : "#fff",
+          }}
+          // color="neutral"
           minRows={8}
           placeholder="Enter your text..."
           size="lg"
-          variant={!props.darkMode ? "outlined" : "solid"}
+          // variant={!props.darkMode ? "outlined" : "solid"}
           value={text}
           onChange={handleOnChange}
         />

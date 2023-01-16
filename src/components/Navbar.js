@@ -7,10 +7,14 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import ModeSwitch from "./ModeSwitch";
 import { ThemeProvider } from "@emotion/react";
-
-const pages = ["Home", "About"];
+import { Link } from "react-router-dom";
 
 function Navbar(props) {
+  const pages = [
+    { route: "/", name: "Home" },
+    { route: "/about", name: "About" },
+  ];
+
   return (
     <ThemeProvider theme={props.darkTheme}>
       <AppBar position="static" enableColorOnDark={!props.darkMode}>
@@ -45,8 +49,9 @@ function Navbar(props) {
               <Button
                 key={page}
                 sx={{ my: 2, color: "white", display: "block" }}
+                onClick={() => {}}
               >
-                {page}
+                <Link to={page.route}>{page.name}</Link>
               </Button>
             ))}
           </Toolbar>
