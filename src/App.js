@@ -15,8 +15,12 @@ function App() {
 
   const handleToggleMode = () => {
     setDarkMode(!darkMode);
+
+    setAlert(darkMode ? "Light mode enabled" : "Dark mode enabled");
+    // darkMode(false)
+    //   ? setAlert("Dark mode enabled")
+    //   : setAlert("Light mode enabled");
     // document.body.style.backgroundColor = "black";
-    setAlert("Dark mode enabled");
   };
 
   const darkTheme = createTheme({
