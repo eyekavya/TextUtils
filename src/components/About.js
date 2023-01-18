@@ -37,10 +37,7 @@ function About() {
   return (
     <>
       <Container maxWidth="lg" sx={{ mt: "2rem" }}>
-        <Accordion
-        // expanded={expanded === "panel1"}
-        // onChange={handleChange("panel1")}
-        >
+        <Accordion>
           <AccordionSummary
             aria-controls="panel1d-content"
             id="panel1d-header"
@@ -58,10 +55,7 @@ function About() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-        // expanded={expanded === "panel2"}
-        // onChange={handleChange("panel2")}
-        >
+        <Accordion>
           <AccordionSummary
             aria-controls="panel2d-content"
             id="panel2d-header"
@@ -79,10 +73,7 @@ function About() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-        // expanded={expanded === "panel3"}
-        // onChange={handleChange("panel3")}
-        >
+        <Accordion>
           <AccordionSummary
             aria-controls="panel3d-content"
             id="panel3d-header"

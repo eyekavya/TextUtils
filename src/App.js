@@ -12,15 +12,24 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [alert, setAlert] = useState("Light mode enabled");
+  const [showAlert, setShowAlert] = useState(false);
+  const [modeText, setModeText] = useState("Light Mode");
 
   const handleToggleMode = () => {
     setDarkMode(!darkMode);
-
     setAlert(darkMode ? "Light mode enabled" : "Dark mode enabled");
-    // darkMode(false)
-    //   ? setAlert("Dark mode enabled")
-    //   : setAlert("Light mode enabled");
-    // document.body.style.backgroundColor = "black";
+
+    setShowAlert(true);
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 1500);
+
+    !darkMode
+      ? (document.body.style.backgroundColor = "#042743")
+      : (document.body.style.backgroundColor = "#fff");
+
+    !darkMode ? setModeText("Dark Mode") : setModeText("Light Mode");
   };
 
   const darkTheme = createTheme({
@@ -40,8 +49,9 @@ function App() {
           darkTheme={darkTheme}
           toggleMode={handleToggleMode}
           darkMode={darkMode}
+          modeText={modeText}
         />
-        <AlertMessage alert={alert} />
+        {showAlert && <AlertMessage alert={alert} />}
 
         <Switch>
           <Route path="/about">

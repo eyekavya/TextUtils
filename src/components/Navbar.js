@@ -55,7 +55,7 @@ function Navbar(props) {
               </Button>
             ))}
           </Toolbar>
-          <ModeSwitch toggleMode={props.toggleMode} />
+          <ModeSwitch toggleMode={props.toggleMode} modeText={props.modeText} />
         </Container>
       </AppBar>
     </ThemeProvider>

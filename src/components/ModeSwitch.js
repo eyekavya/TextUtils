@@ -57,7 +57,7 @@ function ModeSwitch(props) {
       <FormGroup>
         <FormControlLabel
           control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked={false} />}
-          label="Dark Mode"
+          label={props.modeText}
           onChange={props.toggleMode}
         />
       </FormGroup>
