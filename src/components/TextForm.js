@@ -27,7 +27,6 @@ function TextForm(props) {
   }
 
   function handleCopy() {
-    // console.log(text);
     navigator.clipboard.writeText(text);
   }
 
@@ -53,23 +52,19 @@ function TextForm(props) {
             backgroundColor: !props.darkMode ? "#fff" : "#000000a3",
             color: !props.darkMode ? "#000000a3" : "#fff",
           }}
-          // color="neutral"
           minRows={8}
           placeholder="Enter your text..."
           size="lg"
-          // variant={!props.darkMode ? "outlined" : "solid"}
           value={text}
           onChange={handleOnChange}
         />
       </ThemeProvider>
       <Button
-        // disabled={text.length === 0}
         sx={{
           background: "#1976d2",
           color: "white",
           mt: "1rem",
           mx: "0.2rem",
-          // transition: "none",
         }}
         onClick={handleUppercase}
       >
@@ -82,7 +77,6 @@ function TextForm(props) {
           color: "white",
           mt: "1rem",
           mx: "0.2rem",
-          // transition: "none",
         }}
         onClick={handleLowercase}
       >
@@ -95,7 +89,6 @@ function TextForm(props) {
           color: "white",
           mt: "1rem",
           mx: "0.2rem",
-          // transition: "none",
         }}
         onClick={handleClear}
       >
@@ -108,7 +101,6 @@ function TextForm(props) {
           color: "white",
           mt: "1rem",
           mx: "0.2rem",
-          // transition: "none",
         }}
         onClick={handleReverse}
       >
@@ -121,7 +113,6 @@ function TextForm(props) {
           color: "white",
           mt: "1rem",
           mx: "0.2rem",
-          // transition: "none",
         }}
         onClick={handleCopy}
       >
@@ -134,7 +125,6 @@ function TextForm(props) {
           color: "white",
           mt: "1rem",
           mx: "0.2rem",
-          // transition: "none",
         }}
         onClick={handleExtraSpace}
       >
