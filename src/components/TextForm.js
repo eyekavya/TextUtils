@@ -63,6 +63,7 @@ function TextForm(props) {
         />
       </ThemeProvider>
       <Button
+        // disabled={text.length === 0}
         sx={{
           background: "#1976d2",
           color: "white",
@@ -166,7 +167,7 @@ function TextForm(props) {
         Preview Text
       </Typography>
       <Typography variant="h2" sx={{ maxWidth: "552px" }}>
-        {text}
+        {text.length === 0 ? "Nothing to Preview" : text}
       </Typography>
     </>
   );
