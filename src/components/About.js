@@ -43,15 +43,12 @@ function About() {
             id="panel1d-header"
             style={mode}
           >
-            <Typography>Collapsible Group Item #1</Typography>
+            <Typography>Analyze Your text</Typography>
           </AccordionSummary>
           <AccordionDetails style={mode}>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              Textutils gives you a way to analyze your text quickly and
+              efficiently. Be it word count, character count or read time.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -61,15 +58,14 @@ function About() {
             id="panel2d-header"
             style={mode}
           >
-            <Typography>Collapsible Group Item #2</Typography>
+            <Typography>Free to use</Typography>
           </AccordionSummary>
           <AccordionDetails style={mode}>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              TextUtils is a free character counter tool that provides instant
+              character count & word count statistics for a given text.
+              TextUtils reports the number of words and characters. Thus it is
+              suitable for writing text with word/ character limit.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -79,15 +75,14 @@ function About() {
             id="panel3d-header"
             style={mode}
           >
-            <Typography>Collapsible Group Item #3</Typography>
+            <Typography>Browser Compatible</Typography>
           </AccordionSummary>
           <AccordionDetails style={mode}>
             <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
+              This word counter software works in any web browsers such as
+              Chrome, Firefox, Internet Explorer, Safari, Opera. It suits to
+              count characters in facebook, blog, books, excel document, pdf
+              document, essays, etc.
             </Typography>
           </AccordionDetails>
         </Accordion>
