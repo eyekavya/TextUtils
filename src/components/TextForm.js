@@ -144,7 +144,12 @@ function TextForm(props) {
         Your Text Summary
       </Typography>
       <Typography variant="h2">
-        {text.split(" ").length} words and {text.length} characters
+        {
+          text.split(" ").filter((e) => {
+            return e.length !== 0;
+          }).length
+        }{" "}
+        words and {text.length} characters
       </Typography>
       <Typography variant="h2">
         {0.008 * text.split(" ").length} Minutes Read
