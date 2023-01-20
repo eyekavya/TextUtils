@@ -55,7 +55,7 @@ function App() {
 
         <Switch>
           <Route path="/about">
-            <About />
+            <About darkMode={darkMode} />
           </Route>
 
           <Container maxWidth="sm">
