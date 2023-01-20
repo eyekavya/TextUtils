@@ -51,7 +51,12 @@ function Navbar(props) {
                 sx={{ my: 2, color: "white", display: "block" }}
                 onClick={() => {}}
               >
-                <Link to={page.route}>{page.name}</Link>
+                <Link
+                  style={{ color: "#fff", textDecoration: "none" }}
+                  to={page.route}
+                >
+                  {page.name}
+                </Link>
               </Button>
             ))}
           </Toolbar>

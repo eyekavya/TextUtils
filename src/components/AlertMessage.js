@@ -4,11 +4,12 @@ import Alert from "@mui/material/Alert";
 function AlertMessage(props) {
   return (
     <>
-      {/* <div style={{ height: "50px" }}> */}
-      <Alert sx={{ width: "100%" }} severity="success">
+      <Alert
+        severity="success"
+        sx={{ position: "absolute", top: "0", width: "100%" }}
+      >
         {props.alert}
       </Alert>
-      {/* </div> */}
     </>
   );
 }

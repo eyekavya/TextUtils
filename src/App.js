@@ -51,7 +51,9 @@ function App() {
           darkMode={darkMode}
           modeText={modeText}
         />
-        {showAlert && <AlertMessage alert={alert} />}
+        <div style={{ height: "50px", width: "100%", position: "relative" }}>
+          {showAlert && <AlertMessage alert={alert} />}
+        </div>
 
         <Switch>
           <Route path="/about">
