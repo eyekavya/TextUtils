@@ -59,7 +59,7 @@ function App() {
           </Route>
 
           <Container maxWidth="sm">
-            <Heading heading="Enter the text to analyze" />
+            <Heading heading="Try TextUtils - word counter, character counter, remove extra spaces" />
             <Route path="/">
               <TextForm darkMode={darkMode} />
             </Route>

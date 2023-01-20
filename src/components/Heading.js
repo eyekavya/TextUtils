@@ -5,7 +5,7 @@ function Heading(props) {
   return (
     <>
       <Typography
-        sx={{ mt: "1rem", fontSize: 40 }}
+        sx={{ mt: "1rem", fontSize: 25 }}
         align="center"
         variant="h1"
         component="h2"
