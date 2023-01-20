@@ -146,7 +146,7 @@ function TextForm(props) {
       </Typography>
       <Typography variant="h2">
         {
-          text.split(" ").filter((e) => {
+          text.split(/\s+/).filter((e) => {
             return e.length !== 0;
           }).length
         }{" "}
@@ -154,7 +154,7 @@ function TextForm(props) {
       </Typography>
       <Typography variant="h2">
         {0.008 *
-          text.split(" ").filter((e) => {
+          text.split(/\s+/).filter((e) => {
             return e.length !== 0;
           }).length}{" "}
         Minutes Read
@@ -167,7 +167,7 @@ function TextForm(props) {
         Preview Text
       </Typography>
       <Typography variant="h2" sx={{ maxWidth: "552px" }}>
-        {text.length === 0 ? "Nothing to Preview" : text}
+        {text.length === 0 ? "Nothing to preview!" : text}
       </Typography>
     </>
   );
